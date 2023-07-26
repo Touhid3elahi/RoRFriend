@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Friends</h1>
+
+
+<div class="card">
+<div class="card-header">  <%= link_to "New friend", new_friend_path, class: "btn float-end btn-success" %>
+</div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">email</th>
+        <th scope="col">phone</th>
+        <th scope="col">twitter</th>
+        <th style="width: 10%" scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @friends.each do |friend| %>
+        <%= render friend %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
