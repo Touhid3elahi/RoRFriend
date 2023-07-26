@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<% if @friendshow %>
+  <h1>Friend Details</h1>
+  <p><strong>Name:</strong> <%= @friendshow.first_name %></p>
+  <p><strong>Name:</strong> <%= @friendshow.last_name %></p>
+  <p><strong>Age:</strong> <%= @friendshow.email %></p>
+  <p><strong>Email:</strong> <%= @friendshow.phone %></p>
+  <p><strong>Email:</strong> <%= @friendshow.twitter %></p>
+<% else %>
+  <p>Friend not found.</p>
+<% end %>
+
+<div>
+  <%= link_to "Edit this friend", edit_friend_path(@friend) %> |
+  <%= link_to "Back to friends", friends_path %>
+
+  <%= button_to "Destroy this friend", @friend, method: :delete %>
+</div>
